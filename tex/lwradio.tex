@@ -6,16 +6,19 @@
 
 {
 
-	\psset{linewidth=1pt, linestyle=solid}
+	\psset{linewidth=0pt, linestyle=none, fillstyle=solid, fillcolor=BroadcastColour}
 
 	% Langwellenbereich von 148,5 bis 283,5 kHz
 
-	\psframe[fillstyle=solid, fillcolor=BroadcastColour,linewidth=0pt,linestyle=none](1.746,11.55)(9.800,11.75)
+	\psframe(1.746,11.55)(9.800,11.75)
 	\wrapuparrow{BroadcastColour}{11.65}
-	\psframe[fillstyle=solid, fillcolor=BroadcastColour,linewidth=0pt,linestyle=none](0,12.05)(1.107,12.25)
+	\psframe(0,12.05)(1.107,12.25)
 	\wrapdnarrow{BroadcastColour}{12.15}
 
-	\rput(5.77,11.76){\psframebox[framesep=2pt,framearc=0.2,fillstyle=solid, fillcolor=BroadcastColour,linewidth=0pt,linestyle=none]{Langwellenradio}}
+	\rput(5.77,11.76){\psframebox[framesep=2pt,framearc=0.2]{Langwellenradio}}
+
+	% Switching to lines, we need a different linestyle
+	\psset{linewidth=1pt, linestyle=solid}
 
 	%draw baselines on each row for scale
 	\psline{|<*-}(1.746,11.55)(9.80,11.55)
