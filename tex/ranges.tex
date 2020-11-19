@@ -837,25 +837,41 @@
 % TODO: Textfarbe explizit wieder auf Schwarz zurücksetzen?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Broadcast radio frequency bands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Longwave broadcasting band (ITU Region 1)
+\input{tex/lwradio.tex}
+
+% AM broadcast radio on medium wave
+\input{tex/amradio.tex}
+
+% shortwave radio bands
+\input{tex/swradio.tex}
+
+%FM radio
+\input{tex/fmradio.tex}
+
+% Digital Audio Broadcasting -- digital radio (Germany)
+\input{tex/dab+.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO: SORT THOSE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{tex/lwradio.tex}
-
-% TODO Testplatzierung
-\input{tex/dab+.tex}
-
-%some extra radio frequencies, pagers, wireless mics etc.
-\input{tex/itinerant.tex}
-
-%The Schumann resonances
-\input{tex/schumann.tex}
 
 %Power supply transmission frequencies
 \input{tex/power.tex}
 
-% AM broadcast radio on medium wave
-\input{tex/amradio.tex}
+
+
+%some extra radio frequencies, pagers, wireless mics etc.
+% \input{tex/itinerant.tex}
+
+%The Schumann resonances
+\input{tex/schumann.tex}
+
 
 %Middle A musical note 440 Hz
 \rput(7.66,7.16){\pscirclebox[linestyle=solid, linecolor=white, linewidth=1pt, fillstyle=solid,fillcolor=HumanAudioColor]{\textcolor{white}{A4}}}
@@ -894,8 +910,6 @@
   \rput(8.39,16.2){\psframebox[linestyle=none,framesep=1pt,fillcolor=red,fillstyle=solid]{\white SOS}}
 
 
-  %FM radio is placed here since some labels overlap previously defined labels
-  \input{tex/fmradio.tex}
 
   % Marine mobile 162-174 MHz
   \definecolor{BoxColor}{rgb}{0.6,0.86,0.86}
@@ -956,7 +970,7 @@
   %Info from http://www.drao-ofr.hia-iha.nrc-cnrc.gc.ca/outreach/skygazing/1997/sep1197.html
   \blip{4.03,18}{H}
 
-\input{tex/catv.tex}
+% \input{tex/catv.tex}
 
 
   % Cell phone 800MHz (Time division multiple access (TDMA)) not actuially 800MHz, and already covered in the 3G list
@@ -1147,7 +1161,7 @@
 
 
 
-  %water absorption line at 22GHz
+%water absorption line at 22GHz
 % (3.5,20.05) -1.2x
   \rput(2.3,20.05){
   \psclip{\psframe[fillstyle=none,linestyle=none](0,0)(2.4,.3)}
