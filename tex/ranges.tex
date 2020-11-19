@@ -9,8 +9,8 @@
 % Colour definitions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%define colors used in this file
 \definecolor{HumanAudioColor}{rgb}{0.2,0.2,0.6}
+\definecolor{LicenseFreeColor}{rgb}{0.8,0.5,0.1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Specific commands for frequency chart
@@ -877,12 +877,6 @@
 \rput(7.66,7.16){\pscirclebox[linestyle=solid, linecolor=white, linewidth=1pt, fillstyle=solid,fillcolor=HumanAudioColor]{\textcolor{white}{A4}}}
 %Middle C was 261.63Hz located at \rput(0.31,7.66)
 
-% CB Radio 26.960-27.260 MHz
-\definecolor{BoxColor}{rgb}{0.6,0.68,0.86}
-\psframe[fillstyle=solid, fillcolor=BoxColor,linewidth=0pt,linestyle=none](6.71,15.1)(6.86,15.3)
-%\rput(6.78,15.20){26.960-27.260MHz}
-\rput(6.78,15.2){CB}
-
 
   % Digital Television (DTV) Television (Analog) VHF & UHF (Audio??) 54-72MHz
 %  \definecolor{BoxColor}{rgb}{0.5,0.68,0.86}
@@ -900,6 +894,8 @@
 %  \rput(2.34,16.10){DTV}
 
 %  \input{tex/tv.tex}
+
+  \input{tex/licensefree.tex}
 
   % Aeronautical Mobile 108-136 MHz
   \definecolor{BoxColor}{rgb}{0.6,0.68,0.86}
