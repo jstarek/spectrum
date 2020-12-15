@@ -1,21 +1,21 @@
 %AM Radio information
 {
 
+	\colorlet{MWColour}{BroadcastColour!70!} % use colour graduations
 	\psset{linewidth=1pt, linestyle=solid}
 
 	% AM radio 540-1600kHz (two rows)
 	%from http://www.dxing.com/tuning.htm
-	\definecolor{Fill}{rgb}{0.4,0.68,0.86}
-	\psframe[fillstyle=solid, fillcolor=Fill,linewidth=0pt,linestyle=none](0.42,12.55)(9.8,12.75)\wrapuparrow{Fill}{12.65}
-	\psframe[fillstyle=solid, fillcolor=Fill,linewidth=0pt,linestyle=none](0.0,13.05)(5.97,13.25)\wrapdnarrow{Fill}{13.15}
+	\psframe[fillstyle=solid, fillcolor=MWColour,linewidth=0pt,linestyle=none](0.42,12.55)(9.8,12.75)\wrapuparrow{MWColour}{12.65}
+	\psframe[fillstyle=solid, fillcolor=MWColour,linewidth=0pt,linestyle=none](0.0,13.05)(5.97,13.25)\wrapdnarrow{MWColour}{13.15}
 
-	\rput(4.9,12.75){\psframebox[framesep=2pt,framearc=0.2,fillstyle=solid, fillcolor=Fill,linewidth=0pt,linestyle=none]{Mittelwellenradio}}
+	\rput(4.9,12.75){\psframebox[framesep=2pt,framearc=0.2,fillstyle=solid, fillcolor=MWColour,linewidth=0pt,linestyle=none]{Mittelwellenradio}}
 
 	%draw baselines on each row for scale
 	\psline{|<*-}(0.42,12.55)(9.80,12.55)
 	\psline{->|*}(0.00,13.05)(5.97,13.05)
 
-	\rput(0.42,12.65){\psframebox[framesep=1pt,framearc=0,fillstyle=solid, fillcolor=Fill,linewidth=0pt,linestyle=none]{540}}
+	\rput(0.42,12.65){\psframebox[framesep=1pt,framearc=0,fillstyle=solid, fillcolor=MWColour,linewidth=0pt,linestyle=none]{540}}
 	\rput(1.91,12.65){600}
 	\rput(4.09,12.65){700}
 	\rput(5.97,12.65){800}
@@ -26,7 +26,7 @@
 	\rput(3.04,13.15){1300}
 	\rput(4.09,13.15){1400}
 	\rput(5.06,13.15){1500}
-	\rput(5.97,13.15){\psframebox[framesep=1pt,framearc=0,fillstyle=solid, fillcolor=Fill,linewidth=0pt,linestyle=none]{1600}}
+	\rput(5.97,13.15){\psframebox[framesep=1pt,framearc=0,fillstyle=solid, fillcolor=MWColour,linewidth=0pt,linestyle=none]{1600}}
 
 
 	\psline(0.42,12.55)(0.42,12.57)% 	point=540000.00 	position=19.04 	ypos=19

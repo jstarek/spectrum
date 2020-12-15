@@ -269,10 +269,11 @@
 \psset{fillstyle=crosshatch,linewidth=0pt,linestyle=none}
 
 % Microwave P-band (0.3-1 GHz)
-\definecolor{Fill}{rgb}{0.1,0.1,0.67}\psset{hatchcolor=Fill}
-\psframe(1.57,17.0)(9.8,17.1)\wrapuparrow{Fill}{17.05}
-\psframe(0.0,17.5)(8.79,17.6)\wrapdnarrow{Fill}{17.55}
-\rput(1,17.55){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\textcolor{white}{\tiny P-Band}}}
+% Commented out due to collisions with cellphone bands
+%\definecolor{Fill}{rgb}{0.1,0.1,0.67}\psset{hatchcolor=Fill}
+%\psframe(1.57,17.0)(9.8,17.1)\wrapuparrow{Fill}{17.05}
+%\psframe(0.0,17.5)(8.79,17.6)\wrapdnarrow{Fill}{17.55}
+%\rput(1,17.55){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\textcolor{white}{\tiny P-Band}}}
 
 % Microwave L-band (1-2 GHz)
 \definecolor{Fill}{rgb}{0.2,0.1,0.67}\psset{hatchcolor=Fill}
@@ -1014,9 +1015,13 @@
 %   \endpsclip}
 
 
-  %Wireless LAN   Frequency Range; 2.4GHz to 2.5GHz , 5.15GHz to 5.875GHz  (From D-Link Air expert card, good for America and Europe)
+  % Marker for ISM band, TODO: Move to
+  \psframe[fillstyle=solid, fillcolor=PineGreen](1.572,18.55)(2.055,18.75)
+
+
+  %Wireless LAN   Frequency Range; 2.4GHz to 2.484GHz , 5.15GHz to 5.875GHz  (From D-Link Air expert card, good for America and Europe)
   %2.4GHz to 2.5GHz
-  \psframe[fillstyle=solid, fillcolor=gray](1.57,18.67)(2.15,18.77)\rput(1.86,18.72){\textcolor{yellow}{W-LAN}}
+  \psframe[fillstyle=solid, fillcolor=gray](1.572,18.55)(2.055,18.75)\rput(1.81,18.65){\textcolor{yellow}{W-LAN}}
   %5.15GHz to 5.875GHz
   \psframe[fillstyle=solid, fillcolor=gray](2.57,19.15)(4.43,19.25)\rput(3.50,19.20){\textcolor{yellow}{W-LAN}}
 
@@ -1161,44 +1166,9 @@
 
 
 
-% Cellular phone notes:
-% https://en.wikipedia.org/wiki/Cellular_frequencies
-%
+\input{tex/mobilephone.tex}
 
-% 3G cell phone bands from https://en.wikipedia.org/wiki/UMTS_frequency_bands
-{
-	\psset{fillstyle=solid, fillcolor=3GBandColor}
-% 	\psframe(9.653,18.14)(9.800,18.24)\rput[r](9.8,18.19){3G}\wrapuparrow{orange}{18.19}
-% 	\psframe(0.00,18.64)(0.147,18.74)\rput[l](0.0,18.69){3G}\wrapdnarrow{orange}{18.69}
-% 	\psframe(6.628,18.14)(6.776,18.24)\rput(6.702,18.19){3G}
-	\input{tex/3Gbands.tex} % 3G cell phone bands
-}
-
-% 4G/LTE bands
-% https://en.wikipedia.org/wiki/LTE_frequency_bands#Frequency_bands_and_channel_bandwidths
-{
-	\psset{fillstyle=solid, fillcolor=4GBandColor}
-	\input{tex/4Gbands.tex}
-}
-
-% 5G bands
-% https://en.wikipedia.org/wiki/5G_NR_frequency_bands
-{
-	\psset{fillstyle=solid, fillcolor=5GBandColor}
-	\input{tex/5GF1bands.tex}
-	\input{tex/5GF2bands.tex}
-}
-
-
-
-  % Microwave mm-band (40-300 GHz)
-%  \definecolor{Fill}{rgb}{0.9,0.1,0.67}\psset{hatchcolor=Fill}
-%  \psframe(2.15,20.55)(9.80,20.75)\wrapuparrow{Fill}{20.65}
-%  \psframe(0.00,21.05)(9.80,21.25)\wrapbtarrow{Fill}{21.15}
-%  \psframe(0.00,21.55)(9.80,21.75)\wrapbtarrow{Fill}{21.65}
-%  \psframe(0.00,22.05)(1.24,22.25)\wrapdnarrow{Fill}{22.15}
-%  \rput(2.15,20.65){\textcolor{white}{40GHz}}
-%  \rput(8,21.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=2pt]{\textcolor{white}{Microwave mm-band}}}
+\input{tex/scientific.tex}
 
   %O2 absorption line at 60GHz	http://www.wmo.ch/web/www/TEM/SG-RFC/Ch-5Final.doc
 % (7.88,20.55) -1.2x
