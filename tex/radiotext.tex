@@ -45,7 +45,7 @@
 % FM: f(x) = cos(20∙x+15∙sin(x))
 
 
-% Preamble: 
+% Preamble:
 % \pgfplotsset{width=7cm,compat=1.14}
 % \begin{tikzpicture}
 % \begin{axis}[
@@ -89,7 +89,7 @@
 %
 %List of telecommunications regulatory bodies
 % https://en.wikipedia.org/wiki/List_of_telecommunications_regulatory_bodies
-% 
+%
 \item {%
 \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{0.5pt}%
@@ -136,10 +136,10 @@ The radio spectrum (ELF to EHF) is populated by many more items than can be show
  \hspace{0.02in}.
 %
  Time / frequency standards shown as \psframebox[linestyle=none] {\rput(0.1in,0){\timestandard}} \hspace{0.1in}.
-% 
+%
  Other individual frequencies are represented as icons:\vspace{0.1in}\\
 \begin{tabular}{cp{1.4in}cp{1in}cp{1.7in}}
-% 
+%
 \psframebox[linestyle=none]{\submarine{0.02,.0}{xxHz}}\hspace{0.2in}\vspace{0.05in} & Submarine&
 \psframebox[linestyle=none]{\rput(0.15,.05)\pager}&Pager&
 \psframebox[linestyle=none]{\rput(0.05,.05){\psframebox[fillstyle=solid,fillcolor=Itinerant,linecolor=Itinerant,linearc=0,framesep=1pt]{\textcolor{Black}{GMRS}}}}&General Mobile Radio Service\\%
@@ -156,34 +156,7 @@ The radio spectrum (ELF to EHF) is populated by many more items than can be show
 %
 \psframebox[linestyle=none]{\rput(0.11,.05){\psframebox[fillstyle=solid,fillcolor=Itinerant,linecolor=Itinerant,linearc=0,framesep=1pt]{\textcolor{Black}{FRS}}}}&Family Radio Service&
 \psframebox[linestyle=none]{\rput(0.15,-0.1){\wirelessmic}}&Wireless Mic.&
-\psframebox[linestyle=none]{
-% 	\rput(0.15,.05){
-% 		\psframebox[fillstyle=solid,linearc=0,linecolor=yellow,framesep=1pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}
-% 	}
-	\rput(0.08, 0.02){
-		\psset{linestyle=solid, linewidth=0.02in}
-		\psline[linecolor=5GBandColor  ](-.15,0.04)(0.15,0.04)
-		\psline[linecolor=4GBandColor ](-.20,0.02)(0.10,0.02)
-		\psline[linecolor=3GBandColor](-.10,0.00)(0.20,0.00)
-	} 
-	\hspace{.03in}\vspace{0.08in}} & Cellular Phones
-	\psframebox[fillstyle=solid,linearc=0,linecolor=3GBandColor,framesep=1pt,fillcolor=3GBandColor,linewidth=1pt,linestyle=solid]{\textcolor{Black}{3G}}
-	\psframebox[fillstyle=solid,linearc=0,linecolor=4GBandColor, framesep=1pt,fillcolor=4GBandColor, linewidth=1pt,linestyle=solid]{\textcolor{Black}{4G}}
-	\psframebox[fillstyle=solid,linearc=0,linecolor=5GBandColor,  framesep=1pt,fillcolor=5GBandColor,  linewidth=1pt,linestyle=solid]{\textcolor{Black}{5G}}
-\\
-%
-% \psframebox[linestyle=none]{
-% 	\rput(0.11,.05){
-% 		\psframebox[linestyle=none,framesep=1pt,fillcolor=red,linearc=0]{\white SOS}
-% 	}
-% }
-% &
-% 	\psset{dotsize=1pt 1}Distress signal, in Morse code:\vspace{0.18in}
-% \rput(-1.4,-0.18){
-% 	\rput(0,0.05){
-% 		\psdots(0,0)(.1,0)(.2,0)\psline{cc-cc}(0.3,0)(0.42,0)\psline{cc-cc}(0.49,0)(0.61,0)\psline{cc-cc}(0.68,0)(0.8,0)\psdots(.9,0)(1,0)(1.1,0)
-% 	}
-% }%
+
 \end{tabular}
 \input{tex/morse.tex}
 \end{itemize}

@@ -1,0 +1,101 @@
+{
+
+	\tiny
+	\psset{linewidth=0pt,linestyle=none,fillstyle=solid}
+
+	% Derive colours from base color
+	\colorlet{2GColor}{MobilePhoneColor!100!}
+	\colorlet{3GColor}{MobilePhoneColor!70!}
+	\colorlet{4GColor}{MobilePhoneColor!50!}
+	\colorlet{5GColor}{MobilePhoneColor!20!}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% 2G GSM 900 and GSM 1800 (still in use as a fallback)
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Source: https://www.informationszentrum-mobilfunk.de/technik/funktionsweise/gsm
+	{
+
+		\psset{fillcolor=2GColor}
+
+		\psframe(7.146,17.70)(7.538,17.85)\rput(7.34,17.78){GSM 900$\uparrow$}
+		\psframe(7.844,17.70)(8.217,17.85)\rput(8.02,17.78){GSM 900$\downarrow$}
+
+		\psframe(6.579,18.20)(7.186,18.35)\rput(6.88,18.28){GSM 1800$\uparrow$}
+		\psframe(7.344,18.20)(7.919,18.35)\rput(7.63,18.28){GSM 1800$\downarrow$}
+
+	}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% 3G UMTS (being phased out as of 2020)
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Source: https://www.informationszentrum-mobilfunk.de/technik/funktionsweise/umts
+	% TODO: Verify
+	{
+		\psset{fillcolor=3GColor}
+		\psframe(8.217,18.20)(9.80,18.35)\rput(8.9,18.28){3G / UMTS}\wrapuparrow{3GColor}{18.28}
+		\psframe(0.00,18.55)(0.147,18.75)\wrapdnarrow{3GColor}{18.65}
+	}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% 4G LTE
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% https://www.lte-anbieter.info/ratgeber/frequenzen-lte.php
+	% Nur mitteleuropäische Bänder
+	{
+		\psset{fillcolor=4GColor}
+		% LTE Band 1 2110-2170 up, 1920-1980 down
+		\psframe(9.551,18.05)(9.800,18.20)\rput(9.67,18.13){\shortstack{LTE 1$\uparrow$}}
+		\wrapuparrow{4GColor}{18.13}
+		\psframe(0.001,18.55)(0.147,18.75)
+		\wrapdnarrow{4GColor}{18.65}
+		\psframe(8.217,18.05)(8.652,18.20)\rput(8.43,18.13){\shortstack{LTE 1$\downarrow$}}
+		% LTE Band 3 1710-1785 up, 1805-1880 down
+		\psframe(6.579,18.05)(7.186,18.20)\rput(6.88,18.13){\shortstack{LTE Bd. 3$\uparrow$}}
+		\psframe(7.344,18.05)(7.919,18.20)\rput(7.63,18.13){\shortstack{LTE Bd. 3$\downarrow$}}
+		% LTE Band 7 2500-2570 up, 2620-2690 down
+		\psframe(2.149,18.60)(2.539,18.70)\rput(2.34,18.65){\shortstack{LTE 7$\uparrow$}}
+		\psframe(2.812,18.60)(3.185,18.70)\rput(3.00,18.65){\shortstack{LTE 7$\downarrow$}}
+		% LTE Band 8 880-915 up, 925-960 down
+		\psframe(6.987,17.55)(7.538,17.70)\rput(7.26,17.63){\shortstack{LTE Bd. 8$\uparrow$}}
+		\psframe(7.692,17.55)(8.217,17.70)\rput(7.95,17.63){\shortstack{LTE Bd. 8$\downarrow$}}
+		% LTE Band 20 832-862 up, 791-821 down
+		% Überlappung zwischen 20 down und 28 up laut mehrerer Quellen
+		\psframe(6.194,17.55)(6.695,17.75)\rput(6.44,17.65){\shortstack{LTE\\ Band 20$\uparrow$}}
+		\psframe(5.479,17.55)(6.006,17.75)\rput(5.84,17.65){\shortstack{LTE\\ Bd. 20$\downarrow$}}
+		% LTE Band 28 758-803 up, 703-748 down
+		\psframe(4.877,17.55)(5.692,17.75)\rput(5.28,17.65){\shortstack{LTE\\ Band 28$\uparrow$}}
+		\psframe(3.812,17.55)(4.689,17.75)\rput(4.25,17.65){\shortstack{LTE\\ Band 28$\downarrow$}}
+		% LTE Band 32 1452-1496
+		% Band 32 ist nur lokaler Zugang
+		\psframe(4.267,18.05)(4.689,18.25)\rput(4.48,18.15){\shortstack{LTE\\ Band 32}}
+	}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% 5G LTE
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% 5G Bänder in Deutschland, Stand Ende 2020
+	% Source: https://www.5g-anbieter.info/technik/5g-frequenzen.html
+	{
+		\psset{fillcolor=5GColor}
+  		%n1 1920-1980 up,2210-2710 down
+  		\psframe(8.217,18.05)(8.652,18.20)\rput(8.43,18.13){5G n1$\uparrow$}
+  		\psframe(0.406,18.70)(3.289,18.80)\rput(1.85,18.75){5G n1$\downarrow$}
+  		%n28 703-748 up, 758-803 down
+  		\psframe(3.812,17.55)(4.689,17.75)\rput(4.25,17.65){5G n28$\uparrow$}
+  		\psframe(3.812,17.55)(4.689,17.75)\rput(4.25,17.65){5G n28$\downarrow$}
+  		%n78 3300-3800 TDD
+  		\psframe(6.074,18.55)(8.069,18.75)\rput(7.07,18.65){5G n78}
+  		% Pionierband n258 für local area (5G NR)
+  		\psframe(4.873,20.05)(6.651,20.25)\rput(5.76,20.15){5G NR n258}
+  	}
+
+
+
+}
