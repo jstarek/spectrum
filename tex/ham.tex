@@ -1,6 +1,7 @@
 % In Deutschland freigegebene Amateurfunkbänder
 %
-% Bei Bändern mit sehr unterschiedlichen Nutzungseinschränkungen werden die äußersten Bandgrenzen genutzt
+% Bei Bändern mit sehr unterschiedlichen Nutzungseinschränkungen werden die äußersten Bandgrenzen gezeichnet.
+% Die Beschriftung schmaler Bänder ist zur Seite versetzt.
 %
 % Quelle:  https://de.wikipedia.org/wiki/Amateurfunkband
 % Prüfung: https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html
@@ -8,13 +9,13 @@
 
 {
 
-\psset{linestyle=none,fillcolor=green,fillstyle=solid}
+\psset{linestyle=none,fillcolor=AmateurRadioColor,fillstyle=solid}
 
 % 2,2 km 135,7-137.8 kHz
-\psframe(0.491,11.55)(0.501,11.75)\rput(0.51,11.65){2,2\ km}
+\psframe(0.491,11.55)(0.501,11.75)\rput(0.65,11.65){\textcolor{AmateurRadioColor}{2,2\ km}}
 
 % 630 Meter 472-479 kHz
-\psframe(8.315,12.05)(8.523,12.25)\rput(8.42,12.15){630\ m}
+\psframe(8.315,12.05)(8.523,12.25)\rput(8.7,12.15){\textcolor{AmateurRadioColor}{630m}}
 
 % 160 Meter 1.8-2.0MHz
 \psframe(7.718,13.05)(9.129,13.25)\rput(8.42,13.15){160\ m}
@@ -23,25 +24,25 @@
 \psframe(7.241,13.55)(8.404,13.75)\rput(7.82,13.65){80\ m}
 
 % 60 Meter "Tropenband"
-\psframe(3.348,14.05)(3.486,14.25)\rput(3.42,14.15){\tiny 60m}
+\psframe(3.348,14.05)(3.486,14.25)\rput(3.63,14.15){\textcolor{AmateurRadioColor}{60m}}
 
 % 40 Meter 7.0-7.2MHz
 \psframe(7.241,14.05)(7.640,14.25)\rput(7.44,14.15){40\ m}
 
 % 30 Meter 10-10.150MHz
-\psframe(2.62,14.55)(2.69,14.75)\rput(2.66,14.65){30m}
+\psframe(2.62,14.55)(2.69,14.75)\rput(2.83,14.65){\textcolor{AmateurRadioColor}{30m}}
 
 % 20 Meter 14.0-14.35MHz
 \psframe(7.24,14.55)(7.59,14.75)\rput(7.42,14.65){20\ m}
 
 % 17 Meter 18068-18168 kHz
-\psframe(1.05,15.05)(1.13,15.25)\rput(1.09,15.2){17m}
+\psframe(1.05,15.05)(1.13,15.25)\rput(1.27,15.15){\textcolor{AmateurRadioColor}{17m}}
 
 % 15 Meter 21.0-21.45MHz
 \psframe(3.17,15.05)(3.47,15.25)\rput(3.32,15.15){15\ m}
 
 % 12 Meter 24890-24990 kHz
-\psframe(5.58,15.05)(5.63,15.25)\rput(5.61,15.15){12\ m}
+\psframe(5.58,15.05)(5.63,15.25)\rput(5.8,15.15){\textcolor{AmateurRadioColor}{12\ m}}
 
 % 10 Meter 28.0-29.7MHz
 \psframe(7.241,15.05)(8.075,15.25)\rput(7.66,15.15){10\ m}
@@ -50,10 +51,10 @@
 \psframe(5.639,15.55)(6.194,15.75)\rput(5.92,15.65){6\ m}
 
 % 2 Meter 144-146MHz
-\psframe(0.995,16.55)(1.190,16.75)\rput(1.09,16.65){2\ m}
+\psframe(0.995,16.55)(1.190,16.75)\rput(1.09,16.65){2m}
 
 % 70 cm 430-440 MHz
-\psframe(6.662,17.05)(6.987,17.25)\rput(6.82,17.15){70\ cm}
+\psframe(6.662,17.05)(6.987,17.25)\rput(6.82,17.15){70cm}
 
 % 23 cm  1240-1300 MHz
 \psframe(2.035,18.05)(2.703,18.25)\rput(2.37,18.15){23\ cm}
@@ -71,19 +72,19 @@
 \psframe(2.149,19.55)(2.839,19.75)\rput(2.49,19.65){3\ cm}
 
 % 1,2 cm 24-24,25 GHz
-\psframe(4.727,20.05)(4.873,20.25)\rput(4.80,20.15){1,2\ cm}
+\psframe(4.727,20.05)(4.873,20.25)\rput(4.5,20.15){\textcolor{AmateurRadioColor}{1,2\ cm}}
 
 % 6 mm 47-47,2 GHz
-\psframe(4.429,20.55)(4.489,20.75)\rput(4.46,20.65){6\ mm}
+\psframe(4.429,20.55)(4.489,20.75)\rput(4.67,20.65){\textcolor{AmateurRadioColor}{6\ mm}}
 
 % 4 mm 76-81,5 GHz
 \psframe(1.424,21.05)(2.412,21.25)\rput(1.92,21.15){4\ mm}
 
 % 2,5 mm 122,25-123 GHz
-\psframe(8.144,21.05)(8.231,21.25)\rput(8.19,21.15){2,5\ mm}
+\psframe(8.144,21.05)(8.231,21.25)\rput(8.47,21.15){\textcolor{AmateurRadioColor}{2,5\ mm}}
 
 % 2 mm 134-141 GHz
-\psframe(9.442,21.05)(9.755,21.25)\rput(4.90,21.40){2\ mm}\wrapuparrow{green}{21.2}
+\psframe(9.442,21.05)(9.8,21.25)\rput(4.90,21.40){2\ mm}\wrapuparrow{green}{21.2}
 \psframe(0.006,21.55)(0.362,21.75)\rput(0.18,21.65){2\ mm}\wrapdnarrow{green}{21.6}
 
 % 1,2 mm 241-250 GHz
