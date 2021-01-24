@@ -1,0 +1,49 @@
+% Scientific spectrum use
+{
+
+\definecolor{IonosphericColor}{rgb}{0,0.2,1}
+\tiny
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ionosphärenforschung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\psset{linestyle=solid,linecolor=IonosphericColor,fillstyle=hlines,hatchangle=45,hatchcolor=IonosphericColor,fillcolor=IonosphericColor}
+
+% EISCAT, source: https://eiscat.se/wp-content/uploads/2016/05/Technical.pdf
+% Different freq ranges for RX and TX at different sites
+% Aggregated to represent typical ranges
+
+% Ionospheric Heater Tromsø 3.85-8 MHz
+\psframe(8.589,13.40)(9.8,13.47)\wrapuparrow{IonosphericColor}{13.65}
+\psframe(0, 14.01)(9.129,14.075)\rput(4.57,14.05){EISCAT Heater}\wrapdnarrow{IonosphericColor}{14.15}
+% VHF Tromsø, Sodankylä and Kiruna % 214.3-234.7 MHz
+\psframe(6.616,16.70)(7.901,16.85)\rput(7.26,16.77){EISCAT VHF}
+% UHF Longyearbyen 485-515 MHz
+\psframe(8.363,17.05)(9.212,17.25)\rput(8.79,17.15){EISCAT Longyearbyen}
+% UHF Tromsø 921-933.5 MHz
+\psframe(7.631,17.70)(7.821,17.85)\rput(7.71,17.775){\shortstack{EIS\\ CAT}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Radioastronomie
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 1420 MHz Wasserstofflinie
+%Hydrogen line at 21cm (1.42758313333 GHz)
+%Idea from Douglas Scott
+%Info from http://www.drao-ofr.hia-iha.nrc-cnrc.gc.ca/outreach/skygazing/1997/sep1197.html
+\blip{4.03,18}{H}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% X-Ray Crystallography / Röntgenkristallographie
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+% für niedrige Kanalkästchen erster Y-Wert -0,05 zweiter -0,15 Textpos. -0,1
+
+}
